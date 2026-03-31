@@ -115,7 +115,7 @@ export default function Footer() {
           gap: 12,
         }}>
           <span style={{ fontSize: 13, color: 'var(--muted-2)' }}>
-            © {year} TFly · tflyind.com · All rights reserved.
+            © {year} TFly · tflyind.com · All rights reserved. 
           </span>
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
             {[
