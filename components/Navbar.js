@@ -57,14 +57,14 @@ export default function Navbar() {
         transition: 'background 0.35s ease, border-color 0.35s ease',
       }}>
         {/* Logo */}
-        <Link href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', zIndex: 1001 }}>
+        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', zIndex: 1001 }}>
           <div style={{ width: 44, height: 44, borderRadius: '50%', overflow: 'hidden', border: '1.5px solid rgba(0,212,255,0.3)', boxShadow: '0 0 16px rgba(0,212,255,0.15)', flexShrink: 0 }}>
             <Image src="/images/tfly-logo.jpg" alt="TFly Logo" width={44} height={44} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
           </div>
           <span style={{ fontFamily: 'Syne, sans-serif', fontSize: 22, fontWeight: 800, letterSpacing: '-0.5px', color: '#fff' }}>
             TFly<span style={{ color: 'var(--cyan)' }}>.</span>
           </span>
-        </Link>
+        </a>
 
         {/* Desktop links */}
         {isDesktop && (
