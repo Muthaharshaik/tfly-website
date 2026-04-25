@@ -71,6 +71,18 @@ export default function Team() {
 
       <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative' }}>
         <span className="section-label">Our Team</span>
+        <p style={{
+  color: 'var(--muted)',
+  maxWidth: 600,
+  marginTop: 10,
+  marginBottom: 20,
+  fontSize: 14,
+  lineHeight: 1.6
+}}>
+  We are a team of <strong>6 dedicated professionals</strong> including 
+  <strong> 4 QC specialists</strong> and <strong>2 Level-3 engineers</strong> 
+  &nbsp; ensuring precision and high-quality telecom delivery.
+</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 20, marginBottom: 44 }}>
           <h2 style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(26px, 4vw, 50px)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.025em' }}>
             The People<br />
