@@ -13,18 +13,9 @@ function useWindowWidth() {
 }
 
 const industries = [
-  { label: 'Fiber ISPs',             icon: '🌐' },
-  { label: 'ILECs / Telcos',         icon: '📞' },
-  { label: 'Competitive CLECs',      icon: '🔌' },
-  { label: 'Rural Broadband',        icon: '🏘'  },
-  { label: 'Electric Utilities',     icon: '⚡' },
-  { label: 'Cable Operators',        icon: '📡' },
-  { label: 'Tower Companies',        icon: '🗼' },
-  { label: 'Municipal Networks',     icon: '🏛'  },
-  { label: 'EPC Contractors',        icon: '🏗'  },
-  { label: 'NTIA / USDA Programs',   icon: '🇺🇸' },
-  { label: 'Smart City Programs',    icon: '🌆' },
-  { label: 'Real Estate Developers', icon: '🏢' },
+  { label: 'Fiber OSP',             icon: '🌐' },
+  { label: 'Tower Networks',        icon: '🗼' },
+  { label: 'Utility Networks',     icon: '🏛'  },
 ]
 
 export default function Industries() {

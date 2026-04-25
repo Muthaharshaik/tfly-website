@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const stats = [
   { num: '500+', label: 'Miles Surveyed' },
-  { num: '98%',  label: 'QC Pass Rate'   },
+  { num: '88%',  label: 'QC Pass Rate'   },
   { num: '6',    label: 'Core Services'  },
   { num: '24/7', label: 'Field Support'  },
 ]
@@ -96,7 +96,7 @@ export default function Hero() {
         position: 'relative', zIndex: 2,
       }}>
         TFly delivers end-to-end OSP survey, design, and engineering services —
-        from fielding and QC to drafting, OCAL, and basemap production —
+        from fielding and QC to drafting, PLA, and basemap production —
         with the accuracy modern networks demand.
       </p>
 

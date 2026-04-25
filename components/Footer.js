@@ -9,7 +9,7 @@ const footerLinks = {
     { label: 'Field QC',            href: '#services'   },
     { label: 'Engineering Design',  href: '#services'   },
     { label: 'Drafting Services',   href: '#services'   },
-    { label: 'OCAL Services',       href: '#services'   },
+    { label: 'PLA Services',       href: '#services'   },
     { label: 'Basemap Production',  href: '#services'   },
   ],
   Company: [

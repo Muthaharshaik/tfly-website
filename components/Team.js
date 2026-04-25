@@ -16,18 +16,18 @@ function useWindowWidth() {
 const team = [
   {
     name:     'Vaseem Syed',
-    role:     'Chief Executive Officer',
+    role:     'Founder & Managing Director',
     photo:    '/images/team/vaseem.jpeg',
     color:    '#1a5cff',
-    bio:      'Led 50+ OSP projects. 6 years of telecom infrastructure leadership.',
+    bio:      'Led 500+ OSP projects. 6 years of telecom infrastructure leadership.',
     linkedin: 'https://www.linkedin.com/in/syed-vaseem-288a2320a/',
   },
 
   {
     name:     'Manohar Yalla',
-    role:     'Head Of Operations',
+    role:     'Head Of Operations - Sales',
     color:    '#1a5cff',
-    bio:      'Led 500+ OSP projects. 10 years of telecom infrastructure leadership.',
+    bio:      'Led 1000+ OSP projects. 10 years of telecom infrastructure leadership.',
   },
 
   {

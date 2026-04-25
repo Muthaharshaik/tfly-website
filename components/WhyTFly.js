@@ -16,8 +16,8 @@ const reasons = [
   { icon: '⚡', title: 'Certified Field Teams',     desc: 'Our crews are trained in OSP survey methodology, safety standards, and client-specific protocols — delivering data you can trust for engineering decisions.' },
   { icon: '📊', title: 'Transparent Reporting',     desc: 'Real-time project dashboards, daily progress reports, and milestone tracking keep you fully informed — no black boxes or surprises at deadline.' },
   { icon: '⏱', title: 'Fast Turnaround',            desc: 'Structured workflows and a scalable team model let TFly handle urgent deployments and aggressive schedules without sacrificing accuracy.' },
-  { icon: '🔗', title: 'Multi-Format Deliverables', desc: 'We work in AutoCAD, MicroStation, ArcGIS, QGIS, and proprietary OSS/BSS systems — seamless integration with your existing tools.' },
-  { icon: '✅', title: '98%+ QC Pass Rate',          desc: 'Our internal QC catches errors before they reach you. We maintain a 98%+ first-submission acceptance rate across all project types.' },
+  { icon: '🔗', title: 'Multi-Format Deliverables', desc: 'We work in AutoCAD, MicroStation, ArcGIS, IQGeo, Waldo, Aramis, QGIS— seamless integration with your existing tools.' },
+  { icon: '✅', title: '88%+ QC Pass Rate',          desc: 'Our internal QC catches errors before they reach you. We maintain a 88%+ first-submission acceptance rate across all project types.' },
   { icon: '📡', title: 'Scalable Capacity',          desc: 'From a single-route survey to a multi-state fiber buildout, TFly scales team and resources to match your project size and timeline.' },
 ]
 

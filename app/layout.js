@@ -3,7 +3,7 @@ import './globals.css'
 export const metadata = {
   title: 'TFly Engineering — OSP Survey, Design & Engineering',
   description: 'TFly delivers end-to-end OSP survey, design, and engineering services for telecom networks.',
-  keywords: 'OSP survey, outside plant engineering, fiber network design, OCAL, basemap, telecom',
+  keywords: 'OSP survey, outside plant engineering, fiber network design, PLA, basemap, telecom',
 }
 
 export default function RootLayout({ children }) {

@@ -16,7 +16,7 @@ const steps = [
   { num: '01', title: 'Scope & RFP',     desc: 'We review your requirements, define deliverable formats, agree on timelines, and provide a transparent fixed-fee proposal within 24 hours.' },
   { num: '02', title: 'Field Survey',    desc: 'Certified crews collect all OSP data using GPS-equipped tools, following your standard operating procedures and safety protocols.' },
   { num: '03', title: 'QC & Validation', desc: 'Multi-layer quality control review catches data gaps and discrepancies before they move to design or drafting stages.' },
-  { num: '04', title: 'Design & Draft',  desc: 'Engineering design and CAD/GIS drafting in your required formats — construction drawings, strand maps, OCAL, and basemaps.' },
+  { num: '04', title: 'Design & Draft',  desc: 'Engineering design and CAD/GIS drafting in your required formats — construction drawings, strand maps, and basemaps.' },
   { num: '05', title: 'Client Review',   desc: 'Deliverables submitted for client review with a structured revision cycle and sign-off workflow built in at every milestone.' },
   { num: '06', title: 'Final Delivery',  desc: 'Approved packages delivered via secure FTP, GIS portal, or direct system integration — ready for construction or record use.' },
 ]

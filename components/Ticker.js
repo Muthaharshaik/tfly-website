@@ -2,7 +2,7 @@
 
 const items = [
   'OSP Survey', 'Field QC', 'Engineering Design', 'Drafting Services',
-  'OCAL Services', 'Basemap Production', 'TFly Engineering', 'Fiber Networks',
+  'PLA Services', 'Basemap Production', 'TFly Engineering', 'Fiber Networks',
   'Telecom Infrastructure', 'GIS Mapping', 'CAD Drafting', 'Network Planning',
 ]
 

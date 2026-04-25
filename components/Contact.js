@@ -6,97 +6,10 @@ const SERVICES = [
   'Field QC',
   'Engineering Design',
   'Drafting Services',
-  'OCAL Services',
+  'PLA Services',
   'Basemap Production',
   'Multiple / Full Project',
 ]
-
-/*
-  ─────────────────────────────────────────────────────────────────
-  EmailJS SETUP  (one-time, ~5 minutes)
-  ─────────────────────────────────────────────────────────────────
-  1. Sign up at https://www.emailjs.com
-  2. Add an Email Service (Gmail / Outlook / SMTP) → note the Service ID
-  3. Create an Email Template → paste the HTML below into "HTML Content"
-     Map each {{variable}} to the template_params keys below.
-  4. Copy your Public Key from Account → API Keys
-  5. Add to .env.local:
-       NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xxxxxxx
-       NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxxxxxx
-       NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxxx
-
-  ─────────────────────────────────────────────────────────────────
-  EMAIL TEMPLATE — paste into EmailJS → HTML Content
-  Subject line:  🔔 New Project Inquiry — {{service}} | {{company}}
-  ─────────────────────────────────────────────────────────────────
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/></head>
-  <body style="margin:0;padding:0;background:#f0f4f8;font-family:'Segoe UI',Arial,sans-serif;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f4f8;padding:40px 16px;">
-      <tr><td align="center">
-        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
-          <tr><td style="background:linear-gradient(135deg,#060e1e 0%,#0f2040 100%);border-radius:16px 16px 0 0;padding:40px 40px 32px;text-align:center;">
-            <p style="margin:0 0 8px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#00d4ff;font-weight:600;">TFly Engineering</p>
-            <h1 style="margin:0;font-size:26px;font-weight:700;color:#ffffff;line-height:1.2;">New Project Inquiry</h1>
-            <p style="margin:12px 0 0;font-size:14px;color:#7a8faf;">Submitted {{submitted_at}}</p>
-          </td></tr>
-          <tr><td style="background:#0a1628;padding:28px 40px 0;">
-            <div style="background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.25);border-radius:8px;padding:14px 20px;">
-              <p style="margin:0;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#7a8faf;">Service Requested</p>
-              <p style="margin:4px 0 0;font-size:20px;font-weight:700;color:#00d4ff;">{{service}}</p>
-            </div>
-          </td></tr>
-          <tr><td style="background:#0a1628;padding:24px 40px 8px;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="48%" style="padding-bottom:20px;vertical-align:top;">
-                  <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#4a5f80;">Full Name</p>
-                  <p style="margin:0;font-size:16px;color:#ffffff;font-weight:500;">{{from_name}}</p>
-                </td>
-                <td width="4%"></td>
-                <td width="48%" style="padding-bottom:20px;vertical-align:top;">
-                  <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#4a5f80;">Company</p>
-                  <p style="margin:0;font-size:16px;color:#ffffff;font-weight:500;">{{company}}</p>
-                </td>
-              </tr>
-              <tr>
-                <td width="48%" style="padding-bottom:20px;vertical-align:top;">
-                  <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#4a5f80;">Email Address</p>
-                  <a href="mailto:{{reply_to}}" style="margin:0;font-size:15px;color:#00d4ff;text-decoration:none;">{{from_email}}</a>
-                </td>
-                <td width="4%"></td>
-                <td width="48%" style="padding-bottom:20px;vertical-align:top;">
-                  <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#4a5f80;">Phone</p>
-                  <p style="margin:0;font-size:15px;color:#ffffff;">{{phone}}</p>
-                </td>
-              </tr>
-            </table>
-          </td></tr>
-          <tr><td style="background:#0a1628;padding:0 40px;">
-            <div style="height:1px;background:rgba(255,255,255,0.07);"></div>
-          </td></tr>
-          <tr><td style="background:#0a1628;padding:24px 40px 32px;">
-            <p style="margin:0 0 12px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#4a5f80;">Project Details</p>
-            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:20px 24px;">
-              <p style="margin:0;font-size:15px;color:#e8edf8;line-height:1.75;">{{message}}</p>
-            </div>
-          </td></tr>
-          <tr><td style="background:#0a1628;padding:0 40px 36px;text-align:center;">
-            <a href="mailto:{{reply_to}}" style="display:inline-block;background:#1a5cff;color:#ffffff;padding:14px 36px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;">Reply to {{from_name}} →</a>
-          </td></tr>
-          <tr><td style="background:#060e1e;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.06);">
-            <p style="margin:0 0 4px;font-size:13px;color:#4a5f80;">TFly Engineering · OSP Survey, Design & Engineering</p>
-            <p style="margin:0;font-size:12px;color:#2a3f60;">manohar@tflyind.com · tflyind.com</p>
-          </td></tr>
-        </table>
-      </td></tr>
-    </table>
-  </body>
-  </html>
-  ─────────────────────────────────────────────────────────────────
-*/
 
 function useWindowWidth() {
   const [w, setW] = useState(1200)
@@ -134,11 +47,24 @@ export default function Contact() {
       return
     }
 
-    try {
-        const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE   || 'YOUR_SERVICE_ID'
-        const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE  || 'YOUR_TEMPLATE_ID'
-        const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_KEY       || 'YOUR_PUBLIC_KEY'
+    // ── Read env vars (names must match exactly what's in .env.local) ──
+    const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE
+    const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE
+    const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_KEY
 
+    // Guard: warn clearly if env vars are missing
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error('Missing EmailJS env vars:', {
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        EMAILJS_PUBLIC_KEY,
+      })
+      setErrorMsg('Email configuration error. Please contact us directly at manohar@tflyind.com')
+      setStatus('error')
+      return
+    }
+
+    try {
       const submitted_at = new Date().toLocaleString('en-US', {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
         hour: '2-digit', minute: '2-digit', timeZoneName: 'short',
@@ -164,11 +90,18 @@ export default function Contact() {
         }),
       })
 
-      if (!res.ok) throw new Error(`EmailJS ${res.status}`)
+      const data = await res.text()
+      console.log('EmailJS Response:', data)
+
+      // EmailJS returns plain string "OK" on success — anything else is an error
+      if (data !== 'OK') {
+        throw new Error(`EmailJS error: ${data}`)
+      }
+
       setStatus('success')
       setForm({ firstName: '', lastName: '', company: '', email: '', phone: '', service: '', message: '' })
     } catch (err) {
-      console.error(err)
+      console.error('Submit error:', err)
       setErrorMsg('Something went wrong. Please try again or email us directly at manohar@tflyind.com')
       setStatus('error')
     }
@@ -208,7 +141,6 @@ export default function Contact() {
           Submit your inquiry and we&apos;ll respond within 4 business hours with a scope outline and pricing.
         </p>
 
-        {/* JS-controlled responsive grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: isMobile ? '1fr' : 'minmax(0,1.2fr) minmax(0,1fr)',
@@ -216,7 +148,7 @@ export default function Contact() {
           alignItems: 'start',
         }}>
 
-          {/* Form */}
+          {/* ── Form ── */}
           <div style={{
             background: 'rgba(255,255,255,0.025)',
             border: '1px solid rgba(255,255,255,0.08)',
@@ -244,15 +176,15 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                {/* First / Last — stacks on tiny phones */}
+                {/* First / Last */}
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: isTiny ? '1fr' : '1fr 1fr',
                   gap: 16, marginBottom: 16,
                 }}>
                   {[
-                    { name: 'firstName', label: 'First Name', placeholder: 'Your first name',  req: true  },
-                    { name: 'lastName',  label: 'Last Name',  placeholder: 'Your last name', req: false },
+                    { name: 'firstName', label: 'First Name', placeholder: 'Your first name', req: true  },
+                    { name: 'lastName',  label: 'Last Name',  placeholder: 'Your last name',  req: false },
                   ].map(f => (
                     <div key={f.name}>
                       <label style={{ display: 'block', fontSize: 11, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 8 }}>
@@ -267,9 +199,9 @@ export default function Contact() {
                 </div>
 
                 {[
-                  { name: 'company', label: 'Company / Organization', placeholder: 'Your company name',  req: false, type: 'text'  },
-                  { name: 'email',   label: 'Email Address',          placeholder: 'your.email@company.com',   req: true,  type: 'email' },
-                  { name: 'phone',   label: 'Phone (optional)',        placeholder: '+91 XXXXXXXXXX', req: false, type: 'text'  },
+                  { name: 'company', label: 'Company / Organization', placeholder: 'Your company name',      req: false, type: 'text'  },
+                  { name: 'email',   label: 'Email Address',          placeholder: 'your.email@company.com', req: true,  type: 'email' },
+                  { name: 'phone',   label: 'Phone (optional)',        placeholder: '+91 XXXXXXXXXX',        req: false, type: 'text'  },
                 ].map(field => (
                   <div key={field.name} style={{ marginBottom: 16 }}>
                     <label style={{ display: 'block', fontSize: 11, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 8 }}>
@@ -327,7 +259,7 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Info panel */}
+          {/* ── Info panel ── */}
           <div style={{ paddingTop: isMobile ? 0 : 8 }}>
             <h3 style={{
               fontFamily: 'Syne, sans-serif',
@@ -341,9 +273,11 @@ export default function Contact() {
             </p>
 
             {[
-              { icon: '🌐', label: 'Website', value: 'tflyind.com',         href: 'https://tflyind.com'         },
-              { icon: '📧', label: 'Email',   value: 'manohar@tflyind.com', href: 'mailto:manohar@tflyind.com' },
-              { icon: '📞', label: 'Phone',   value: '+91 8919343572',      href: 'tel:+918919343572'          },
+              { icon: '🌐', label: 'Website', value: 'tflyind.com',              href: 'https://tflyind.com'              },
+              { icon: '📧', label: 'Email',   value: 'vaseemsyed@tflyind.com',   href: 'mailto:vaseemsyed@tflyind.com'   },
+              { icon: '📧', label: 'Email',   value: 'manohar@tflyind.com',      href: 'mailto:manohar@tflyind.com'      },
+              { icon: '📞', label: 'Phone',   value: '+91 8919343572',           href: 'tel:+918919343572'               },
+              { icon: '📍', label: 'Address', value: 'Nellore, Andhra Pradesh',  href: null                              },
             ].map((c, i) => (
               <div key={i} style={{ display: 'flex', gap: 14, marginBottom: 20, alignItems: 'center' }}>
                 <div style={{
@@ -353,11 +287,15 @@ export default function Contact() {
                 }}>{c.icon}</div>
                 <div>
                   <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--muted)', marginBottom: 2 }}>{c.label}</div>
-                  <a href={c.href} style={{ fontSize: 15, color: '#fff', textDecoration: 'none' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
-                    onMouseLeave={e => e.target.style.color = '#fff'}>
-                    {c.value}
-                  </a>
+                  {c.href ? (
+                    <a href={c.href} style={{ fontSize: 15, color: '#fff', textDecoration: 'none' }}
+                      onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
+                      onMouseLeave={e => e.target.style.color = '#fff'}>
+                      {c.value}
+                    </a>
+                  ) : (
+                    <span style={{ fontSize: 15, color: '#fff' }}>{c.value}</span>
+                  )}
                 </div>
               </div>
             ))}
