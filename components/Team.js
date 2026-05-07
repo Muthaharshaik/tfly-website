@@ -24,6 +24,13 @@ const team = [
   },
 
   {
+    name:     'Shashidhar Nerella',
+    role:     'VP of business',
+    color:    '#1a5cff',
+    bio:      'Led 1000+ OSP projects. 10 years of telecom infrastructure leadership.',
+  },
+
+  {
     name:     'Manohar Yalla',
     role:     'Head Of Operations - Sales',
     color:    '#1a5cff',
@@ -79,7 +86,7 @@ export default function Team() {
   fontSize: 14,
   lineHeight: 1.6
 }}>
-  We are a team of <strong>6 dedicated professionals</strong> including 
+  We are a team of <strong>10 dedicated professionals</strong> including 
   <strong> 4 QC specialists</strong> and <strong>2 Level-3 engineers</strong> 
   &nbsp; ensuring precision and high-quality telecom delivery.
 </p>
