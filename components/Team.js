@@ -26,8 +26,10 @@ const team = [
   {
     name:     'Shashidhar Nerella',
     role:     'VP of business',
+    photo:    '/images/team/shashi.png',
     color:    '#1a5cff',
-    bio:      'Led 1000+ OSP projects. 10 years of telecom infrastructure leadership.',
+    bio:      'At Tfly Pvt. Ltd., my focus on Wireline Delivery and Pre-sales is driven by a commitment to matching telecommunications industry standards with high-caliber professional skills. Holding a Certified Fiber to the Home Professional (CFHP) credential, my recent work involves pioneering solutions that cater to intricate network challenges..',
+    linkedin: 'https://www.linkedin.com/in/shashi-nerella-cfhp-72082037/',
   },
 
   {

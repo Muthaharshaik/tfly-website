@@ -277,7 +277,6 @@ export default function Contact() {
               { icon: '📧', label: 'Email',   value: 'shashidhar.nerella@gmail.com',   href: 'mailto:shashidhar.nerella@gmail.com'   },
               { icon: '📧', label: 'Email',   value: 'vaseemsyed@tflyind.com',   href: 'mailto:vaseemsyed@tflyind.com'   },
               { icon: '📧', label: 'Email',   value: 'manohar@tflyind.com',      href: 'mailto:manohar@tflyind.com'      },
-              { icon: '📞', label: 'Phone',   value: '+91 74168 24168',           href: 'tel:+9174168 24168'               },
               { icon: '📞', label: 'Phone',   value: '+91 8919343572',           href: 'tel:+918919343572'               },
               { icon: '📍', label: 'Address', value: 'Nellore, Andhra Pradesh',  href: null                              },
             ].map((c, i) => (
