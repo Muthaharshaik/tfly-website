@@ -17,7 +17,7 @@ const team = [
   {
     name:     'Vaseem Syed',
     role:     'Founder & Managing Director',
-    photo:    '/images/team/vaseem.jpeg',
+    // photo:    '/images/team/vaseem.jpeg',
     color:    '#1a5cff',
     bio:      'Led 500+ OSP projects. 6 years of telecom infrastructure leadership.',
     linkedin: 'https://www.linkedin.com/in/syed-vaseem-288a2320a/',
@@ -26,7 +26,7 @@ const team = [
   {
     name:     'Shashidhar Nerella',
     role:     'VP of business',
-    photo:    '/images/team/shashi.png',
+    // photo:    '/images/team/shashi.png',
     color:    '#1a5cff',
     bio:      'At Tfly Pvt. Ltd., my focus on Wireline Delivery and Pre-sales is driven by a commitment to matching telecommunications industry standards with high-caliber professional skills. Holding a Certified Fiber to the Home Professional (CFHP) credential, my recent work involves pioneering solutions that cater to intricate network challenges..',
     linkedin: 'https://www.linkedin.com/in/shashi-nerella-cfhp-72082037/',
@@ -35,6 +35,7 @@ const team = [
   {
     name:     'Manohar Yalla',
     role:     'Head Of Operations - Sales',
+    // photo:    '/images/team/manohar.png',
     color:    '#1a5cff',
     bio:      'Led 1000+ OSP projects. 10 years of telecom infrastructure leadership.',
   },
