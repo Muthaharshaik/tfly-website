@@ -4,13 +4,19 @@ import { useEffect, useState } from 'react'
 
 // Each link has a real href — section anchors or mailto/tel
 const footerLinks = {
-  Services: [
+  'Telecom Services': [
     { label: 'OSP Survey',          href: '#services'   },
     { label: 'Field QC',            href: '#services'   },
     { label: 'Engineering Design',  href: '#services'   },
     { label: 'Drafting Services',   href: '#services'   },
-    { label: 'PLA Services',       href: '#services'   },
+    { label: 'PLA Services',        href: '#services'   },
     { label: 'Basemap Production',  href: '#services'   },
+  ],
+  'IT Services': [
+    { label: 'Managed IT',            href: '#services' },
+    { label: 'Software Development',   href: '#services' },
+    { label: 'Website Development',       href: '#services' },
+    { label: 'Mobile App Development',       href: '#services' }
   ],
   Company: [
     { label: 'About Us',   href: '#why'        },
@@ -54,7 +60,7 @@ export default function Footer() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isTiny ? '1fr' : isMobile ? '1fr 1fr' : '2fr 1fr 1fr 1fr',
+          gridTemplateColumns: isTiny ? '1fr' : isMobile ? '1fr 1fr' : '1.5fr 1fr 1fr 1fr 1fr',
           gap: isMobile ? 32 : 48,
           marginBottom: 48,
         }}>
@@ -69,7 +75,7 @@ export default function Footer() {
               </span>
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.75, fontWeight: 300, maxWidth: 280 }}>
-              End-to-end OSP survey, design, and engineering services for modern telecom networks. Precision-built infrastructure, delivered on time.
+              Enterprise IT solutions and telecom engineering services. From cloud infrastructure to OSP survey — precision-built, delivered on time.
             </p>
             <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
               <a href="https://www.linkedin.com/in/tfly-12ab97395/" target="_blank" rel="noopener noreferrer"

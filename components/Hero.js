@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 const stats = [
   { num: '500+', label: 'Miles Surveyed' },
   { num: '88%',  label: 'QC Pass Rate'   },
-  { num: '6',    label: 'Core Services'  },
-  { num: '24/7', label: 'Field Support'  },
+  { num: '12',   label: 'Core Services'  },
+  { num: '24/7', label: 'Support'        },
 ]
 
 function useWindowWidth() {
@@ -62,7 +62,7 @@ export default function Hero() {
         flexWrap: 'wrap', justifyContent: 'center',
       }}>
         <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--cyan)', animation: 'pulseDot 2s ease-in-out infinite', flexShrink: 0 }} />
-        OSP Survey · Design · Engineering
+        IT Solutions · Telecom · Engineering
       </div>
 
       {/* Heading */}
@@ -81,9 +81,9 @@ export default function Hero() {
           Precision-Built
         </span>
         <br />
-        <span style={{ color: 'rgba(255,255,255,0.92)' }}>Telecom Infrastructure</span>
+        <span style={{ color: 'rgba(255,255,255,0.92)' }}>IT & Telecom</span>
         <br />
-        <span style={{ color: 'rgba(255,255,255,0.35)' }}>Engineering</span>
+        <span style={{ color: 'rgba(255,255,255,0.35)' }}>Solutions</span>
       </h1>
 
       {/* Subheading */}
@@ -95,9 +95,9 @@ export default function Hero() {
         transition: 'all 0.7s ease 0.3s',
         position: 'relative', zIndex: 2,
       }}>
-        TFly delivers end-to-end OSP survey, design, and engineering services —
-        from fielding and QC to drafting, PLA, and basemap production —
-        with the accuracy modern networks demand.
+        TFly delivers end-to-end IT solutions and telecom engineering services —
+        from cloud infrastructure and cybersecurity to OSP survey, design, and basemap production —
+        with the precision modern enterprises demand.
       </p>
 
       {/* CTAs */}

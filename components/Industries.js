@@ -15,7 +15,10 @@ function useWindowWidth() {
 const industries = [
   { label: 'Fiber OSP',             icon: '🌐' },
   { label: 'Tower Networks',        icon: '🗼' },
-  { label: 'Utility Networks',     icon: '🏛'  },
+  { label: 'Utility Networks',      icon: '🏛' },
+  { label: 'Enterprise IT',         icon: '💻' },
+  { label: 'Healthcare',            icon: '🏥' },
+  { label: 'Finance & Banking',     icon: '🏦' },
 ]
 
 export default function Industries() {
@@ -40,7 +43,7 @@ export default function Industries() {
             </span>
           </h2>
           <p style={{ color: 'var(--muted)', fontSize: 15, maxWidth: 360, fontWeight: 300, lineHeight: 1.7 }}>
-            TFly supports a broad range of telecom and utility clients across the infrastructure development lifecycle.
+            TFly supports a broad range of enterprise, telecom, and utility clients across IT and infrastructure development.
           </p>
         </div>
 
@@ -84,7 +87,7 @@ export default function Industries() {
               Don't see your industry?
             </h3>
             <p style={{ color: 'var(--muted)', fontSize: 14, fontWeight: 300 }}>
-              We work with any organization deploying or maintaining telecom infrastructure.
+              We work with any organization needing IT solutions or deploying telecom infrastructure.
             </p>
           </div>
           <a href="#contact" className="btn-glow" style={{ flexShrink: 0 }}>Talk to Us →</a>

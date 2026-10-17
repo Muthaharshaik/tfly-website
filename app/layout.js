@@ -1,9 +1,9 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'TFly Engineering — OSP Survey, Design & Engineering',
-  description: 'TFly delivers end-to-end OSP survey, design, and engineering services for telecom networks.',
-  keywords: 'OSP survey, outside plant engineering, fiber network design, PLA, basemap, telecom',
+  title: 'TFly Engineering — IT Services & Telecom Engineering',
+  description: 'TFly delivers enterprise IT solutions and end-to-end telecom engineering services — from cloud, cybersecurity & managed IT to OSP survey, design, and basemap production.',
+  keywords: 'IT services, cloud solutions, cybersecurity, managed IT, OSP survey, telecom engineering, fiber network design, software development',
 }
 
 export default function RootLayout({ children }) {

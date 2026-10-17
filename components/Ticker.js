@@ -1,9 +1,10 @@
 'use client'
 
 const items = [
-  'OSP Survey', 'Field QC', 'Engineering Design', 'Drafting Services',
-  'PLA Services', 'Basemap Production', 'TFly Engineering', 'Fiber Networks',
-  'Telecom Infrastructure', 'GIS Mapping', 'CAD Drafting', 'Network Planning',
+  'OSP Survey', 'Cloud Solutions', 'Engineering Design', 'Cybersecurity',
+  'Managed IT', 'Basemap Production', 'TFly Engineering', 'Fiber Networks',
+  'Software Development', 'GIS Mapping', 'Network Solutions', 'Data Analytics',
+  'Telecom Infrastructure', 'IT Infrastructure', 'Field QC', 'Enterprise IT',
 ]
 
 export default function Ticker() {

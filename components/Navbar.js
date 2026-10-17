@@ -8,7 +8,7 @@ const navLinks = [
   { href: '#process',    label: 'Process'    },
   { href: '#why',        label: 'Why Us'     },
   { href: '#industries', label: 'Industries' },
-  { href: '#team',       label: 'Team'       },
+  // { href: '#team',       label: 'Team'       },
 ]
 
 function useWindowWidth() {
