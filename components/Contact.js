@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react'
 
 const SERVICES = [
+  'Website Development',
+  'Mobile App Development',
   'OSP Survey',
   'Field QC',
   'Engineering Design',
